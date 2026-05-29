@@ -1,0 +1,44 @@
+====================================================
+  FIXMATE APP - FREE GEMINI AI SETUP GUIDE
+====================================================
+
+The AI chatbot now uses Google Gemini 1.5 Flash (FREE!)
+No paid API key needed — get free key in 2 minutes!
+
+HOW TO GET YOUR FREE GEMINI API KEY:
+=====================================
+1. Go to: https://aistudio.google.com/app/apikey
+2. Sign in with your Google account
+3. Click "Create API Key"
+4. Copy the key (starts with "AIzaSy...")
+
+WHERE TO PUT YOUR KEY:
+========================
+File: app/src/main/java/com/example/fixmate/RepairStepsActivity.java
+Line: private static final String GEMINI_API_KEY = "YOUR_KEY_HERE";
+
+Replace "AIzaSyD-9tSrke72WhFra-WjFSUoRUNFTqf7YgQ" with your own key.
+
+FREE TIER LIMITS:
+==================
+- 15 requests per minute
+- 1 million tokens per month
+- COMPLETELY FREE, no credit card needed!
+
+BUGS FIXED IN THIS VERSION:
+==============================
+1. ✅ Chatbot replaced: Anthropic → FREE Google Gemini AI
+2. ✅ YouTube: No more "video unavailable" — always opens YouTube search
+3. ✅ Heater problems fixed (case sensitivity bug)
+4. ✅ AI has offline fallback (works without internet too!)
+5. ✅ Conversation history properly tracked
+
+YOUTUBE FIX EXPLAINED:
+========================
+Previously, clicking "Watch Video" would show "Video unavailable".
+Now it:
+1. Tries to open the specific video in YouTube app
+2. Falls back to YouTube browser
+3. ALWAYS falls back to YouTube SEARCH — so you always see working videos!
+
+====================================================

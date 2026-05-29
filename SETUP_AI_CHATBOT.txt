@@ -1,0 +1,49 @@
+===========================================
+   HOW TO ENABLE THE AI CHATBOT (FREE)
+===========================================
+
+The AI chatbot in RepairStepsActivity uses the Anthropic Claude API.
+To enable it, you need a FREE API key.
+
+STEPS:
+------
+1. Go to: https://console.anthropic.com/
+2. Sign up for a free account
+3. Go to "API Keys" section
+4. Click "Create Key" - copy the key (starts with sk-ant-...)
+
+5. Open this file in Android Studio:
+   app/src/main/java/com/example/fixmate/RepairStepsActivity.java
+
+6. Find this line near the top:
+   private static final String ANTHROPIC_API_KEY = "YOUR_ANTHROPIC_API_KEY_HERE";
+
+7. Replace YOUR_ANTHROPIC_API_KEY_HERE with your actual key:
+   private static final String ANTHROPIC_API_KEY = "sk-ant-api03-xxxxx...";
+
+8. Rebuild and run the app!
+
+NOTE: Without the API key, the chatbot shows a fallback message.
+The rest of the app works perfectly without it.
+
+===========================================
+   WHAT'S NEW IN THIS VERSION
+===========================================
+
+BUGS FIXED:
+- App no longer crashes when clicking Repair Guide ✅
+- Call Now button now works (opens phone dialer) ✅
+- Heater appliance now shows correct repair steps ✅
+
+NEW FEATURES:
+- AI Chatbot on every repair step page 🤖
+- YouTube button - search repair videos instantly 📺
+- Call Technician button - find nearby electrician 📞
+- Much better repair steps with emojis and tips 📋
+- Warning cards for dangerous repairs ⚠️
+- Pro tips on every repair page 💡
+- Firebase Auth - real login/register/logout ✅
+- Auto-login if already logged in ✅
+- Forgot password feature ✅
+
+===========================================

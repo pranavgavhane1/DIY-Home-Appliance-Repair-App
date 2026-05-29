@@ -1,0 +1,68 @@
+===========================================
+  FIXMATE - FIREBASE SETUP INSTRUCTIONS
+===========================================
+
+WHAT WAS FIXED IN THIS PROJECT:
+---------------------------------
+1. Firebase Authentication added (Login + Register now ACTUALLY works)
+2. User stays logged in after closing app (auto-login on splash screen)
+3. Logout button added in top-right menu of MainActivity
+4. Forgot Password feature added on Login screen
+5. Heater bug fixed (was "heater" not matching case)
+6. App name changed to "FixMate" (was inconsistently named)
+7. Better UI on Login and Register screens (card layout, cleaner)
+8. Better error messages (tells user what went wrong)
+9. Register saves user name + email to Firestore database
+
+---
+
+HOW TO SET UP FIREBASE (DO THIS ONCE):
+---------------------------------------
+
+STEP 1: Go to https://console.firebase.google.com/
+        - Click "Add project"
+        - Name it: FixMate
+        - Click Continue → Continue → Create project
+
+STEP 2: In Firebase Console, click "Android" icon to add Android app
+        - Package name: com.example.fixmate
+        - App nickname: FixMate
+        - Click "Register App"
+
+STEP 3: Download the "google-services.json" file
+        - Replace the file at: app/google-services.json
+        (The current one is just a template - you MUST replace it)
+
+STEP 4: In Firebase Console → Authentication
+        - Click "Get Started"
+        - Click "Email/Password" → Enable it → Save
+
+STEP 5: In Firebase Console → Firestore Database
+        - Click "Create database"
+        - Choose "Start in test mode"
+        - Select a location → Enable
+
+STEP 6: Build and run your app in Android Studio!
+        - Users can now Register and Login for real
+        - Their data is saved in Firebase
+
+---
+
+APP FLOW:
+---------
+Splash Screen (3 sec)
+   ↓ (if not logged in)
+Login Screen → Register Screen
+   ↓ (after login/register)
+MainActivity (Electrician Finder)
+   ↓ (tap "Repair Guides")
+RepairGuideActivity → companyActivity → ModelActivity → ProblemActivity → RepairStepsActivity
+
+---
+
+QUESTIONS? ASK YOUR PROFESSOR ABOUT:
+- Firebase Authentication
+- Firestore Database
+- google-services.json
+
+===========================================
